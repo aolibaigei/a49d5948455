@@ -1,0 +1,22 @@
+syntax = "proto3";
+package msgexample;
+
+option go_package = "msgexamplepb";
+
+message MSG{
+    int32 msg_id = 1;
+    string msg_text = 2;
+}
+message MsgRequest {
+    MSG msg = 1;
+}
+
+message MsgResp {
+    string recvmsg = 1;
+}
+
+
+service MsgService{
+
+    rpc Send(MsgRequest) returns (MsgResp){};
+}
