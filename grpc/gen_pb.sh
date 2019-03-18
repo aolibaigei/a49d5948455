@@ -1,1 +1,1 @@
-protoc -I /home/dev/gosrc/a49d5948455/grpc/pbfile --go_out=/home/dev/gosrc/a49d5948455/grpc/pbfile /home/dev/gosrc/a49d5948455/grpc/pbfile/msg.proto
+protoc ./pbfile/msg.proto --go_out=plugins=grpc:.
