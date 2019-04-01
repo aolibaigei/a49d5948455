@@ -16,7 +16,9 @@ func main() {
 	// any approach to require this configuration into your program.
 
 	err := viper.ReadConfig(bytes.NewBuffer(yamlExample))
-	fmt.Println(err)
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	// // this would be "steve"
 	fmt.Println(viper.Get("eyes"))
