@@ -20,6 +20,10 @@ func main() {
 		fmt.Println(err)
 	}
 
-	// // this would be "steve"
-	fmt.Println(viper.Get("eyes"))
+	// fmt.Println(viper.Get("eyes"))
+
+	yey := viper.Get("eyes")
+	for _, key := range yey.([]interface{}) {
+		fmt.Println(key.(string))
+	}
 }
